@@ -15,7 +15,7 @@ The DMSI framework investigates two key ideas:
 1. Physiological signals can indicate when metabolic inference is reliable.
 2. Biomarkers such as VOCs may represent delayed metabolic state rather than instantaneous glucose levels.
 
-This repository
+This repository provides a prototype implementation of the physiological reliability layer within the DMSI framework.
 
 The DMSI framework models metabolic sensing as a three-layer process:
 
@@ -36,6 +36,11 @@ Biomarkers such as breath VOCs that may reflect metabolic state with temporal de
 This project focuses on **Layer 1 and Layer 2**, providing a prototype for physiological reliability assessment.
 
 ---
+## Prototype Implementation
+
+This repository contains an early research prototype implementing the first stage of the DMSI framework.
+
+The current implementation focuses on extracting physiological features from PPG signals and visualizing HRV characteristics that may reflect autonomic nervous system states.
 
 ## Prototype Goal
 
@@ -79,23 +84,23 @@ Simple baseline models such as logistic regression or tree-based classifiers can
 
 ## Repository Structure
 
+## Repository Structure
+
 DMSI
 │
+├── Data
+│ Subset of physiological data used for demonstration
+│
 ├── notebooks
-│ physiological_reliability_analysis.ipynb
+│ HRV signal processing and visualization notebooks
 │
-├── src
-│ ppg_preprocessing.py
-│ hrv_features.py
-│ reliability_model.py
+├── SRC
+│ Signal processing utilities and future modules
 │
-├── figures
-│ hrv_feature_visualization.png
+├── figure
+│ Generated visualization results
 │
 └── README.md
-
-
----
 
 ## Research Direction
 
@@ -106,6 +111,22 @@ Future extensions of this framework include:
 - exploring uncertainty-aware inference in digital health systems
 
 ---
+## Current Prototype Status
+
+The current repository implements a basic HRV signal processing pipeline including:
+
+- PPG signal visualization
+- peak detection
+- RR interval extraction
+- HRV feature visualization (SDNN, RMSSD)
+- exploratory physiological state analysis
+
+This stage focuses on validating the feasibility of physiological reliability indicators before integrating delayed metabolic biomarkers such as breath VOC signals.
+## Example Visualization
+
+Example RR interval series extracted from PPG signals:
+
+![RR Interval](figures/rr_series.png)
 
 ## Author
 
