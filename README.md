@@ -16,20 +16,26 @@ The DMSI framework investigates two key ideas:
 2. Biomarkers such as VOCs may represent delayed metabolic state rather than instantaneous glucose levels.
 
 This repository provides a prototype implementation of the physiological reliability layer within the DMSI framework.
+## DMSI Framework
 
 The DMSI framework models metabolic sensing as a three-layer process:
 
-Layer 1 — Physiological State
-Signals reflecting autonomic and cardiovascular dynamics
+**Layer 1 — Physiological State**
+
+Signals reflecting autonomic and cardiovascular dynamics  
 (e.g., PPG, HRV)
 
-    ↓
-Layer 2 — Reliability Filtering
-Detection of physiological conditions where metabolic inference may be unreliable
+↓
+
+**Layer 2 — Reliability Filtering**
+
+Detection of physiological conditions where metabolic inference may be unreliable  
 (e.g., stress, motion, autonomic imbalance)
 
-    ↓
-Layer 3 — Delayed Metabolic Signals
+↓
+
+**Layer 3 — Delayed Metabolic Signals**
+
 Biomarkers such as breath VOCs that may reflect metabolic state with temporal delay
 
 
@@ -84,23 +90,23 @@ Simple baseline models such as logistic regression or tree-based classifiers can
 
 ## Repository Structure
 
-## Repository Structure
-
+```
 DMSI
 │
 ├── Data
-│ Subset of physiological data used for demonstration
+│   Subset of physiological data used for demonstration
 │
 ├── notebooks
-│ HRV signal processing and visualization notebooks
+│   HRV signal processing and visualization notebooks
 │
 ├── SRC
-│ Signal processing utilities and future modules
+│   Signal processing utilities and future modules
 │
-├── figure
-│ Generated visualization results
+├── figures
+│   Generated visualization results
 │
 └── README.md
+```
 
 ## Research Direction
 
