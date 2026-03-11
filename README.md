@@ -126,7 +126,7 @@ This stage focuses on validating the feasibility of physiological reliability in
 
 Example RR interval series extracted from PPG signals:
 
-![RR Interval](figures/rr_series.png)
+![RR Interval](figure/RR_interval_scatter.png)
 
 ## Author
 
