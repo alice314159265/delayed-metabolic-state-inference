@@ -1,6 +1,7 @@
 # DMSI – Delayed Metabolic State Inference
 
 A research prototype exploring reliability-aware physiological inference for non-invasive metabolic monitoring.
+⚠️ This repository presents a conceptual research prototype rather than a production-ready system.
 
 ---
 
@@ -56,7 +57,7 @@ The current implementation focuses on extracting physiological features from PPG
 
 ## Prototype Goal
 
-The prototype's goal is to explore inference validity rather than raw prediction accuracy. It focuses on identifying conditions under which physiological signals (like HRV) become decoupled from metabolic targets (like glucose), thus invalidating the mapping between them. Instead of assuming continuous reliability, the framework introduces context-aware inference validity assessment.
+The prototype's goal is to explore inference validity rather than raw prediction accuracy. It focuses on identifying conditions under which physiological signals (like HRV) become decoupled from metabolic targets (like glucose), thus invalidating the mapping between them. 
 
 Instead of assuming continuous reliability, the framework introduces **context-aware inference validity assessment.**
 
@@ -135,13 +136,28 @@ The current repository implements a basic HRV signal processing pipeline includi
 
 This stage focuses on validating the feasibility of physiological reliability indicators before integrating delayed metabolic biomarkers such as breath VOC signals.
 ## Example Visualization
+All generated figures are stored in the `figures/` directory.
+
+### RR Interval Analysis
 
 Example RR interval series extracted from PPG signals:
 
 ![RR Interval](figure/RR_interval_scatter.png)
 
+### HRV Dynamics (Physiological State)
+
+Time-varying RMSSD illustrates how autonomic state evolves over time:
+
+![HRV Dynamics](figure/HRV_RMSSD_dynamics.png)
+
+### Inference Validity Gating
+
+A simple prototype demonstrating how physiological signals can be used to identify potentially unreliable inference regions:
+
+![Inference Validity](figure/HRV_inference_validity_gating.png)
+
 ## Author
 
 Ke Shang
 
-Research interests: digital health, physiological signal inference, reliability-a
+Research interests: digital health, physiological signal inference, reliability-aware modeling, computational physiology
