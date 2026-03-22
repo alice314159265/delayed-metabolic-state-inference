@@ -8,7 +8,7 @@ A research prototype exploring reliability-aware physiological inference for non
 
 This project explores a conceptual framework for metabolic sensing systems that explicitly account for physiological reliability and temporal delay.
 
-Many non-invasive metabolic sensing approaches assume that biomarkers (such as breath VOCs) directly reflect instantaneous blood glucose levels. However, physiological processes often introduce temporal delays and contextual variability. As a result, signals used for metabolic inference may be unreliable under certain physiological conditions.
+Many non-invasive metabolic sensing approaches assume that biomarkers (such as breath VOCs) directly reflect instantaneous blood glucose levels. However, physiological processes often introduce temporal delays and contextual variability. The DMSI framework explicitly models the biomarker-glucose relationship as a non-stationary mapping that varies across physiological regimes. A key goal is to explore whether physiological signals (e.g., from PPG) can be used to detect these regime shifts, identifying moments where the state-dependent mapping becomes invalid.
 
 The DMSI framework investigates two key ideas:
 
@@ -16,6 +16,12 @@ The DMSI framework investigates two key ideas:
 2. Biomarkers such as VOCs may represent delayed metabolic state rather than instantaneous glucose levels.
 
 This repository provides a prototype implementation of the physiological reliability layer within the DMSI framework.
+
+## Conceptual Positioning
+
+Unlike conventional approaches that optimize prediction accuracy, this project reframes metabolic sensing as a problem of inference validity under physiological modulation.
+Instead of assuming a stable mapping between biomarkers and glucose, the DMSI framework investigates when such mappings are physiologically valid, and when they break down due to systemic perturbations.
+
 ## DMSI Framework
 
 The DMSI framework models metabolic sensing as a three-layer process:
@@ -50,7 +56,7 @@ The current implementation focuses on extracting physiological features from PPG
 
 ## Prototype Goal
 
-The prototype aims to explore whether features derived from PPG-based HRV can be used to identify physiological states in which metabolic inference systems should abstain or down-weight predictions.
+The prototype's goal is to explore inference validity rather than raw prediction accuracy. It focuses on identifying conditions under which physiological signals (like HRV) become decoupled from metabolic targets (like glucose), thus invalidating the mapping between them. Instead of assuming continuous reliability, the framework introduces context-aware inference validity assessment.
 
 Instead of assuming continuous reliability, the framework introduces **context-aware inference validity assessment.**
 
@@ -112,9 +118,9 @@ DMSI
 
 Future extensions of this framework include:
 
-- modeling delayed metabolic biomarkers such as breath VOCs
-- integrating physiological reliability with metabolic prediction
-- exploring uncertainty-aware inference in digital health systems
+- Latent State Modeling: Extending the framework toward a latent state model, where both physiological signals (PPG/HRV) and biomarkers (VOCs) are treated as indirect, noisy observations of the underlying metabolic dynamics.
+- Integrating inference validity with metabolic prediction models.
+- Exploring uncertainty-aware inference in digital health systems.
 
 ---
 ## Current Prototype Status
